@@ -6,6 +6,8 @@ class Content < ApplicationRecord
     link: "link"
   }
 
+  belongs_to :page
+
   validates :kind, :value, presence: true
   validates :kind, inclusion: { in: Content.kinds.keys }
 end
