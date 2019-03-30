@@ -10,7 +10,7 @@ RSpec.describe Logs::Register do
       end
 
       context 'when message is missing' do
-        xit { expect { subject.new(ulr: 'http://example.com/) }.not_to raise_error }
+        xit { expect { subject.new(ulr: 'http://example.com/') }.not_to raise_error }
       end
     end
 

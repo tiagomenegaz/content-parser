@@ -11,7 +11,7 @@ RSpec.describe Content, type: :model do
     end
 
     context 'with all required fields supplied' do
-      let(:page_id) { Page.create(original_url: 'example.com').id }
+      let(:page_id) { Page.create(original_url: 'http://example.com').id }
       let(:params) { { value: 'Some text', kind: 'h1', page_id: page_id } }
 
       it { expect(subject.new(params).valid?).to be_truthy }
