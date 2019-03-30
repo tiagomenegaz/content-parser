@@ -3,7 +3,7 @@ class Content < ApplicationRecord
     h1: "h1",
     h2: "h2",
     h3: "h3",
-    link: "link"
+    a: "a"
   }
 
   belongs_to :page
