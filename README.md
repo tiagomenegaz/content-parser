@@ -30,9 +30,22 @@ rails s
 
 # Request Example
 
+This project has two endpoints. The first is to add a page content and the second is to list all stored content.
+Attention, this project is compatible with [JSONAPI](https://jsonapi.org) requirements. So you need to add your header with `-H "Accept: application/vnd.api+json"`.
+
+### Inserting a page content
 ```
-# Insert a page content
 curl -i -H "Accept: application/vnd.api+json" -H 'Content-Type:application/vnd.api+json' -X POST -d '{"data": {"type":"pages", "attributes":{"original_url":"http://example.com"}}}' http://localhost:3000/api/v1/pages
-# GET all pages and its content
+```
+
+### Retrieving all stored page content
+
+In the example below shows you how to list all saved pages.
+```
+curl -i -H "Accept: application/vnd.api+json" "http://localhost:3000/api/v1/pages"
+```
+
+You can also request all related tag content using `include=contentst` param.
+```
 curl -i -H "Accept: application/vnd.api+json" "http://localhost:3000/api/v1/pages?include=contents"
 ```
