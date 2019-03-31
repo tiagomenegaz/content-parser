@@ -37,6 +37,7 @@ Attention, this project is compatible with [JSONAPI](https://jsonapi.org) requir
 ```
 curl -i -H "Accept: application/vnd.api+json" -H 'Content-Type:application/vnd.api+json' -X POST -d '{"data": {"type":"pages", "attributes":{"original_url":"http://example.com"}}}' http://localhost:3000/api/v1/pages
 ```
+You can change the parameter `original_url` from `http://example.com` to an URL of your choice.
 
 ### Retrieving all stored page content
 
