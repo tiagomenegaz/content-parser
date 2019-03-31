@@ -9,9 +9,9 @@ WORKDIR /usr/app
 
 COPY Gemfile* /usr/app/
 
-RUN gem install bundler:2.0.1
-RUN gem install sqlite3:1.3.13
-RUN bundle config build.nokogiri --use-system-libraries && \
+RUN gem install bundler:2.0.1 && \
+  gem install sqlite3:1.3.13 && \
+  bundle config build.nokogiri --use-system-libraries && \
   bundle install
 
 COPY . /usr/app/
