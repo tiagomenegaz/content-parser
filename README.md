@@ -46,7 +46,7 @@ In the example below shows you how to list all saved pages.
 curl -i -H "Accept: application/vnd.api+json" "http://localhost:3000/api/v1/pages"
 ```
 
-You can also request all related tag content using `include=contentst` param.
+You can also request all related tag content using `include=contents` param.
 ```
 curl -i -H "Accept: application/vnd.api+json" "http://localhost:3000/api/v1/pages?include=contents"
 ```
